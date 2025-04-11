@@ -11,6 +11,20 @@ class AppRouter extends RootStackRouter {
       path: '/',
       initial: true,
     ),
+    AdaptiveRoute(
+      page: LoginBaseRoute.page,
+      path: '/base',
+      children: [
+        RedirectRoute(
+          path: '',
+          redirectTo: 'login',
+        ),
+        AdaptiveRoute(
+          page: LoginRoute.page,
+          path: 'login',
+        ),
+      ],
+    ),
     AutoRoute(
       page: HomeRoute.page,
       path: '/home',

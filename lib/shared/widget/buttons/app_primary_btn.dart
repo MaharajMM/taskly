@@ -16,7 +16,7 @@ class PrimaryButton extends StatelessWidget {
     this.icon = const Icon(Icons.download_rounded),
     this.isIcon = false,
     this.borderColor,
-    this.fontColor = AppColors.kBlack,
+    this.fontColor = AppColors.kwhite,
     this.padding,
   });
   final BorderRadiusGeometry? borderRadius;

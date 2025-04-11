@@ -67,7 +67,7 @@ class _OnboardingViewState extends State<OnboardingView> {
   }
 
   _gotoLoginSignUp() {
-    context.navigateTo(HomeRoute());
+    context.navigateTo(LoginBaseRoute());
   }
 
   @override

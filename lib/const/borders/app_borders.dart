@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class AppBorder {
   AppBorder._();
   // All Circular Radius Constant
-  static BorderRadiusGeometry kQuatCurve = BorderRadius.circular(5);
-  static BorderRadiusGeometry kHalfCurve = BorderRadius.circular(10);
-  static BorderRadiusGeometry kHalfMiddleCurve = BorderRadius.circular(15);
-  static BorderRadiusGeometry kFullCurve = BorderRadius.circular(20);
-  static BorderRadiusGeometry kFullMiddleCurve = BorderRadius.circular(25);
+  static BorderRadiusGeometry kQuatCurve = BorderRadius.circular(4);
+  static BorderRadiusGeometry kHalfCurve = BorderRadius.circular(8);
+  static BorderRadiusGeometry kHalfMiddleCurve = BorderRadius.circular(12);
+  static BorderRadiusGeometry kFullCurve = BorderRadius.circular(16);
+  static BorderRadiusGeometry kFullMiddleCurve = BorderRadius.circular(24);
 
 // Horizontal Circular Radius Constant
   static const BorderRadiusGeometry kHalfCurveHorizontalLeft =
