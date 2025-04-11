@@ -4,6 +4,18 @@
 class R {
   const R._();
 
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/illustrations/onboarding-1.png)
+  static const String ASSETS_ILLUSTRATIONS_ONBOARDING_1_PNG =
+      'assets/illustrations/onboarding-1.png';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/illustrations/onboarding-2.png)
+  static const String ASSETS_ILLUSTRATIONS_ONBOARDING_2_PNG =
+      'assets/illustrations/onboarding-2.png';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/illustrations/onboarding-3.png)
+  static const String ASSETS_ILLUSTRATIONS_ONBOARDING_3_PNG =
+      'assets/illustrations/onboarding-3.png';
+
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/bottom-left-white-blurred.png)
   static const String ASSETS_IMAGES_BOTTOM_LEFT_WHITE_BLURRED_PNG =
       'assets/images/bottom-left-white-blurred.png';
