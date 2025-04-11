@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taskly/const/colors/app_colors.dart';
+import 'package:taskly/const/resource.dart';
 import 'package:taskly/features/splash/controller/future_initializer.dart';
 import 'package:taskly/shared/riverpod_ext/asynvalue_easy_when.dart';
 
@@ -27,6 +30,8 @@ class SplashView extends ConsumerStatefulWidget {
 
 class _SplashViewState extends ConsumerState<SplashView> {
   late Stopwatch stopwatch;
+  bool _navigationTriggered = false;
+
   @override
   void initState() {
     stopwatch = Stopwatch()..start();
@@ -34,6 +39,11 @@ class _SplashViewState extends ConsumerState<SplashView> {
     if (widget.removeSpalshLoader) {
       RendererBinding.instance.deferFirstFrame();
     }
+
+    // Start a 3-second timer regardless of other operations
+    Future.delayed(const Duration(seconds: 3), () {
+      _checkAndNavigate();
+    });
   }
 
   @override
@@ -42,6 +52,7 @@ class _SplashViewState extends ConsumerState<SplashView> {
       ref.read(futureInitializerPod.future).whenComplete(
         () {
           RendererBinding.instance.allowFirstFrame();
+          _checkAndNavigate();
         },
       );
     }
@@ -55,6 +66,18 @@ class _SplashViewState extends ConsumerState<SplashView> {
     super.dispose();
   }
 
+  void _checkAndNavigate() {
+    if (!mounted || _navigationTriggered) return;
+
+    final futureAsync = ref.read(futureInitializerPod);
+    if (futureAsync is AsyncData &&
+        futureAsync.valueOrNull != null &&
+        stopwatch.elapsedMilliseconds >= 3000) {
+      _navigationTriggered = true;
+      widget.onInitialized(futureAsync.requireValue);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer(
@@ -64,14 +87,12 @@ class _SplashViewState extends ConsumerState<SplashView> {
           futureInitializerPod,
           (previous, next) {
             if (next is AsyncData && next.valueOrNull != null) {
-              widget.onInitialized(next.requireValue);
+              _checkAndNavigate();
             }
           },
         );
         return futureAsync.easyWhen(
-          data: (data) {
-            return const SizedBox.shrink();
-          },
+          data: (data) => LoaderChild(),
           loadingWidget: () => child!,
           errorWidget: (error, stackTrace) => child!,
         );
@@ -90,55 +111,47 @@ class LoaderChild extends StatefulWidget {
   State<LoaderChild> createState() => _LoaderChildState();
 }
 
-class _LoaderChildState extends State<LoaderChild> with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    duration: const Duration(seconds: 2),
-    vsync: this,
-  )..repeat(reverse: true);
-  late final Animation<double> _animation = CurvedAnimation(
-    parent: _controller,
-    curve: Curves.elasticOut,
-  );
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _LoaderChildState extends State<LoaderChild> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.white,
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Center(
-              child: RotationTransition(
-                turns: _animation,
-                child: const FlutterLogo(
-                  size: 100,
-                ),
+    return Scaffold(
+      backgroundColor: AppColors.kPrimaryColor,
+      body: Stack(
+        fit: StackFit.loose,
+        children: [
+          Align(
+            alignment: Alignment.topRight,
+            child: Image.asset(R.ASSETS_IMAGES_TOP_RIGHT_WHITE_BLURRED_PNG),
+          ),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Image.asset(R.ASSETS_IMAGES_BOTTOM_LEFT_WHITE_BLURRED_PNG),
+          ),
+          SafeArea(
+            child: Center(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 45,
+                    backgroundColor: AppColors.kwhite,
+                    child: SvgPicture.asset(R.ASSETS_IMAGES_LOGO_ICON_SVG),
+                  ),
+                  SizedBox(width: 12),
+                  Text(
+                    'TO-DO',
+                    style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.grey200,
+                        ),
+                  )
+                ],
               ),
             ),
-            const Positioned(
-              bottom: 44,
-              child: CircularProgressIndicator(
-                color: Colors.amber,
-              ),
-            ),
-            const Positioned(
-              bottom: 16,
-              child: Material(
-                  child: Text(
-                "Welcome to Taskly App",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
-            ),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taskly/app/view/app.dart';
 import 'package:taskly/bootstrap.dart';
+import 'package:taskly/const/colors/app_colors.dart';
 import 'package:taskly/features/splash/view/splash_view.dart';
 
 class Splasher extends StatelessWidget {
@@ -10,9 +11,9 @@ class Splasher extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.blue),
+      theme: ThemeData(primaryColor: AppColors.kPrimaryColor),
       home: SplashView(
-        removeSpalshLoader: true,
+        removeSpalshLoader: false,
         onInitialized: (container) {
           bootstrap(
             () => const App(),
