@@ -22,6 +22,26 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            final router = context.router;
+
+            try {
+              // Attempt to get the AutoTabsRouter
+              final tabsRouter = AutoTabsRouter.of(context);
+              // If successful, switch to the Home tab
+              tabsRouter.setActiveIndex(0);
+            } catch (e) {
+              // If AutoTabsRouter is not found, just pop the current route
+              router.maybePop();
+            }
+          },
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Stack(
         children: [
           Container(
@@ -43,7 +63,7 @@ class ProfileView extends StatelessWidget {
               children: [
                 // Profile header with background gradient
                 SizedBox(
-                  height: MediaQuery.sizeOf(context).height * 0.13,
+                  height: MediaQuery.sizeOf(context).height * 0.07,
                   width: double.infinity,
                 ),
 
