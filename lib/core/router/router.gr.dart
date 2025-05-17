@@ -9,38 +9,39 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:taskly/features/counter/view/counter_page.dart' deferred as _i1;
 import 'package:taskly/features/home/view/home_page.dart' as _i2;
 import 'package:taskly/features/login/view/login_base_page.dart' as _i3;
 import 'package:taskly/features/login/view/login_page.dart' as _i4;
 import 'package:taskly/features/onboarding/view/onboarding_page.dart' as _i5;
+import 'package:taskly/features/sign_up/view/sign_up_page.dart' as _i6;
 
 /// generated route for
 /// [_i1.CounterPage]
-class CounterRoute extends _i6.PageRouteInfo<void> {
-  const CounterRoute({List<_i6.PageRouteInfo>? children})
+class CounterRoute extends _i7.PageRouteInfo<void> {
+  const CounterRoute({List<_i7.PageRouteInfo>? children})
     : super(CounterRoute.name, initialChildren: children);
 
   static const String name = 'CounterRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
-      return _i6.DeferredWidget(_i1.loadLibrary, () => _i1.CounterPage());
+      return _i7.DeferredWidget(_i1.loadLibrary, () => _i1.CounterPage());
     },
   );
 }
 
 /// generated route for
 /// [_i2.HomePage]
-class HomeRoute extends _i6.PageRouteInfo<void> {
-  const HomeRoute({List<_i6.PageRouteInfo>? children})
+class HomeRoute extends _i7.PageRouteInfo<void> {
+  const HomeRoute({List<_i7.PageRouteInfo>? children})
     : super(HomeRoute.name, initialChildren: children);
 
   static const String name = 'HomeRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i2.HomePage();
@@ -50,13 +51,13 @@ class HomeRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.LoginBasePage]
-class LoginBaseRoute extends _i6.PageRouteInfo<void> {
-  const LoginBaseRoute({List<_i6.PageRouteInfo>? children})
+class LoginBaseRoute extends _i7.PageRouteInfo<void> {
+  const LoginBaseRoute({List<_i7.PageRouteInfo>? children})
     : super(LoginBaseRoute.name, initialChildren: children);
 
   static const String name = 'LoginBaseRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i3.LoginBasePage();
@@ -66,13 +67,13 @@ class LoginBaseRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.LoginPage]
-class LoginRoute extends _i6.PageRouteInfo<void> {
-  const LoginRoute({List<_i6.PageRouteInfo>? children})
+class LoginRoute extends _i7.PageRouteInfo<void> {
+  const LoginRoute({List<_i7.PageRouteInfo>? children})
     : super(LoginRoute.name, initialChildren: children);
 
   static const String name = 'LoginRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i4.LoginPage();
@@ -82,16 +83,32 @@ class LoginRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.OnboardingPage]
-class OnboardingRoute extends _i6.PageRouteInfo<void> {
-  const OnboardingRoute({List<_i6.PageRouteInfo>? children})
+class OnboardingRoute extends _i7.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i7.PageRouteInfo>? children})
     : super(OnboardingRoute.name, initialChildren: children);
 
   static const String name = 'OnboardingRoute';
 
-  static _i6.PageInfo page = _i6.PageInfo(
+  static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
       return const _i5.OnboardingPage();
+    },
+  );
+}
+
+/// generated route for
+/// [_i6.SignUpPage]
+class SignUpRoute extends _i7.PageRouteInfo<void> {
+  const SignUpRoute({List<_i7.PageRouteInfo>? children})
+    : super(SignUpRoute.name, initialChildren: children);
+
+  static const String name = 'SignUpRoute';
+
+  static _i7.PageInfo page = _i7.PageInfo(
+    name,
+    builder: (data) {
+      return const _i6.SignUpPage();
     },
   );
 }

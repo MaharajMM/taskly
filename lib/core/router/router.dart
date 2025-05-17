@@ -23,6 +23,10 @@ class AppRouter extends RootStackRouter {
           page: LoginRoute.page,
           path: 'login',
         ),
+        AdaptiveRoute(
+          page: SignUpRoute.page,
+          path: 'sign-up',
+        ),
       ],
     ),
     AutoRoute(

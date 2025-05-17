@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:taskly/features/auth/view/widgets/login_form.dart';
+import 'package:taskly/features/auth/view/widgets/sign_up_form.dart';
 
 class AuthenticationView extends StatelessWidget {
   final bool isLogin;
@@ -17,7 +18,12 @@ class AuthenticationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return FormBuilder(
       key: formKey,
-      child: isLogin ? LoginForm(authBtn: authBtn) : Container(),
+      child: isLogin
+          ? LoginForm(authBtn: authBtn)
+          : SignUpForm(
+              authBtn: authBtn,
+              formKey: formKey,
+            ),
     );
   }
 }

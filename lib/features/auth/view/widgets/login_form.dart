@@ -120,6 +120,7 @@ class _LoginFormState extends State<LoginForm> {
                 style: TextStyle(
                   color: AppColors.kPrimaryColor,
                   fontSize: 12,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),

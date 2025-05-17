@@ -71,7 +71,6 @@ class LoginBasePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(height: 20),
 
                     const AutoRouter(),
                   ],
