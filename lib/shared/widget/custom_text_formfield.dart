@@ -36,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
     this.valueTransformer,
     this.inputFormatters,
     this.isAlignWithHint = false,
+    this.borderColor,
   });
 
   final Widget? prefixIcon;
@@ -67,6 +68,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String?)? valueTransformer;
   final List<TextInputFormatter>? inputFormatters;
   final bool isAlignWithHint;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -112,11 +114,11 @@ class CustomTextFormField extends StatelessWidget {
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade200),
+          borderSide: BorderSide(color: borderColor ?? Colors.grey.shade200),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade200),
+          borderSide: BorderSide(color: borderColor ?? Colors.grey.shade200),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),

@@ -8,8 +8,7 @@ class AppRouter extends RootStackRouter {
   late final List<AutoRoute> routes = [
     AutoRoute(
       page: OnboardingRoute.page,
-      path: '/',
-      initial: true,
+      path: '/on',
     ),
     AdaptiveRoute(
       page: LoginBaseRoute.page,
@@ -31,7 +30,9 @@ class AppRouter extends RootStackRouter {
     ),
     AutoRoute(
       page: NavigationRoute.page,
-      path: '/navigation',
+      // path: '/navigation',
+      path: '/',
+      initial: true,
       children: [
         RedirectRoute(
           path: '',

@@ -20,7 +20,9 @@ class NavigationPage extends StatelessWidget {
             indicatorShape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
             ),
-            elevation: 15,
+            height: 55,
+            backgroundColor: AppColors.kwhite,
+            shadowColor: Colors.grey[900],
             labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
             labelTextStyle: WidgetStateProperty.all(
               TextStyle(
@@ -31,8 +33,6 @@ class NavigationPage extends StatelessWidget {
           ),
           child: NavigationBar(
             selectedIndex: tabsRouter.activeIndex,
-            height: 55,
-            backgroundColor: AppColors.kwhite,
             onDestinationSelected: tabsRouter.setActiveIndex,
             destinations: [
               NavigationDestination(

@@ -14,6 +14,9 @@ class R {
   static const String ASSETS_ICONS_NOTIFICATION_SVG =
       'assets/icons/notification.svg';
 
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/search.svg)
+  static const String ASSETS_ICONS_SEARCH_SVG = 'assets/icons/search.svg';
+
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/illustrations/onboarding-1.png)
   static const String ASSETS_ILLUSTRATIONS_ONBOARDING_1_PNG =
       'assets/illustrations/onboarding-1.png';
@@ -37,6 +40,10 @@ class R {
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/center-right-orange-blurred.png)
   static const String ASSETS_IMAGES_CENTER_RIGHT_ORANGE_BLURRED_PNG =
       'assets/images/center-right-orange-blurred.png';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/empty-task.png)
+  static const String ASSETS_IMAGES_EMPTY_TASK_PNG =
+      'assets/images/empty-task.png';
 
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/logo-icon.svg)
   static const String ASSETS_IMAGES_LOGO_ICON_SVG =
