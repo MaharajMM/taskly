@@ -4,6 +4,16 @@
 class R {
   const R._();
 
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/calendar.svg)
+  static const String ASSETS_ICONS_CALENDAR_SVG = 'assets/icons/calendar.svg';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/home.svg)
+  static const String ASSETS_ICONS_HOME_SVG = 'assets/icons/home.svg';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/notification.svg)
+  static const String ASSETS_ICONS_NOTIFICATION_SVG =
+      'assets/icons/notification.svg';
+
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/illustrations/onboarding-1.png)
   static const String ASSETS_ILLUSTRATIONS_ONBOARDING_1_PNG =
       'assets/illustrations/onboarding-1.png';

@@ -73,7 +73,9 @@ class _LoginViewState extends State<LoginView> {
           AuthenticationView(
             authBtn: PrimaryButton(
               labelText: 'Log in',
-              onPressed: () {},
+              onPressed: () {
+                context.router.push(NavigationRoute());
+              },
             ),
             formKey: _loginFormKey,
             isLogin: true,

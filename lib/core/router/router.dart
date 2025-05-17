@@ -30,8 +30,30 @@ class AppRouter extends RootStackRouter {
       ],
     ),
     AutoRoute(
-      page: HomeRoute.page,
-      path: '/home',
+      page: NavigationRoute.page,
+      path: '/navigation',
+      children: [
+        RedirectRoute(
+          path: '',
+          redirectTo: 'home',
+        ),
+        AdaptiveRoute(
+          page: HomeRoute.page,
+          path: 'home',
+        ),
+        AdaptiveRoute(
+          page: NotificationRoute.page,
+          path: 'notification',
+        ),
+        AdaptiveRoute(
+          page: CalenderRoute.page,
+          path: 'calender',
+        ),
+        AdaptiveRoute(
+          page: ProfileRoute.page,
+          path: 'profile',
+        ),
+      ],
     ),
   ];
 }
