@@ -136,7 +136,7 @@ class _LoaderChildState extends State<LoaderChild> {
                   CircleAvatar(
                     radius: 45,
                     backgroundColor: AppColors.kwhite,
-                    child: SvgPicture.asset(R.ASSETS_IMAGES_LOGO_ICON_SVG),
+                    child: SvgPicture.asset(R.ASSETS_LOGO_LOGO_ICON_SVG),
                   ),
                   SizedBox(width: 12),
                   Text(

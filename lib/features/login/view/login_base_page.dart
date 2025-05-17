@@ -51,7 +51,7 @@ class LoginBasePage extends StatelessWidget {
                             backgroundColor: AppColors.kPrimaryColor,
                             child: SvgPicture.asset(
                               height: 20,
-                              R.ASSETS_IMAGES_LOGO_ICON_SVG,
+                              R.ASSETS_LOGO_LOGO_ICON_SVG,
                               colorFilter: const ColorFilter.mode(
                                 AppColors.kwhite,
                                 BlendMode.srcIn,

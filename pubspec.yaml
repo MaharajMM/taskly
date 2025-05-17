@@ -56,6 +56,7 @@ dev_dependencies:
   slang_build_runner: ^4.4.2
   spot: ^0.17.0
   very_good_analysis: ^7.0.0
+  flutter_launcher_icons: ^0.14.3
 
 flutter:
   uses-material-design: true
@@ -63,3 +64,13 @@ flutter:
     - assets/images/
     - assets/illustrations/
     - assets/icons/
+    - assets/logo/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo/logo_ios.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true # remove alpha channel from iOS icon
+  adaptive_icon_background: "#FFFFFF" # android adaptive icon background color
+  adaptive_icon_foreground: "assets/logo/logo_android.png" # android adaptive icon foreground image

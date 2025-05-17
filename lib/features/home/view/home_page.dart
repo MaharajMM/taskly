@@ -74,7 +74,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
         onPressed: () {
           // Add new task functionality
         },
-        backgroundColor: const Color(0xFFEA6242),
+        backgroundColor: AppColors.kPrimaryColor,
         child: const Icon(Icons.add, color: Colors.white),
       ),
       body: SafeArea(
@@ -266,7 +266,7 @@ class _HomeViewState extends State<HomeView> with SingleTickerProviderStateMixin
         margin: const EdgeInsets.only(right: 8),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFEA6242) : Colors.white,
+          color: isSelected ? AppColors.kPrimaryColor : Colors.white,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isSelected ? Colors.transparent : Colors.grey[300]!,

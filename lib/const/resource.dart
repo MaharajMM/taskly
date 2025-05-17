@@ -54,11 +54,17 @@ class R {
   static const String ASSETS_IMAGES_EMPTY_TASK_PNG =
       'assets/images/empty-task.png';
 
-  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/logo-icon.svg)
-  static const String ASSETS_IMAGES_LOGO_ICON_SVG =
-      'assets/images/logo-icon.svg';
-
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/images/top-right-white-blurred.png)
   static const String ASSETS_IMAGES_TOP_RIGHT_WHITE_BLURRED_PNG =
       'assets/images/top-right-white-blurred.png';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/logo/logo-icon.svg)
+  static const String ASSETS_LOGO_LOGO_ICON_SVG = 'assets/logo/logo-icon.svg';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/logo/logo_android.png)
+  static const String ASSETS_LOGO_LOGO_ANDROID_PNG =
+      'assets/logo/logo_android.png';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/logo/logo_ios.png)
+  static const String ASSETS_LOGO_LOGO_IOS_PNG = 'assets/logo/logo_ios.png';
 }
