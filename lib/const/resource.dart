@@ -10,9 +10,18 @@ class R {
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/home.svg)
   static const String ASSETS_ICONS_HOME_SVG = 'assets/icons/home.svg';
 
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/logout.svg)
+  static const String ASSETS_ICONS_LOGOUT_SVG = 'assets/icons/logout.svg';
+
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/notification.svg)
   static const String ASSETS_ICONS_NOTIFICATION_SVG =
       'assets/icons/notification.svg';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/password.svg)
+  static const String ASSETS_ICONS_PASSWORD_SVG = 'assets/icons/password.svg';
+
+  /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/pencil.svg)
+  static const String ASSETS_ICONS_PENCIL_SVG = 'assets/icons/pencil.svg';
 
   /// ![preview](file:///Users/maharajmadanmohan/Desktop/Development/assignments/taskly/assets/icons/search.svg)
   static const String ASSETS_ICONS_SEARCH_SVG = 'assets/icons/search.svg';
